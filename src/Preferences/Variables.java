@@ -21,7 +21,7 @@ public class Variables {
 	public static final double skillWeight = 1;
 	public static final double prefWeight = 1;
 	//the highier the less random it will be, exponential
-	public static final double certainty = 2;
+	public static final double certainty = 10;
 	
 	
 	

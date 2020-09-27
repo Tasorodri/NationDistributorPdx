@@ -28,8 +28,8 @@ public class NationDistributer {
 	public void asingNations() {
 		
 		//TODO hay que iterar por paises no por jugadores
-		while(playerList.size()>0) {
-			assingCountry(playerList.get(0));
+		while(nationList.size()>0) {
+			assingCountry(nationList.get(0));
 		}
 		
 		for(Player player: electionList.keySet()) {
@@ -41,16 +41,16 @@ public class NationDistributer {
 	/***
 	 * This method does the call to the random select
 	 * store the result on a list and removes the player and the nation from the algorithm
-	 * @param player
+	 * @param nation
 	 */
-	private void assingCountry(Player player) {
-		Nation selected = randomSelec(player.getWeights());
+	private void assingCountry(Nation nation) {
+		Player selected = randomSelec(nation);
 
-		electionList.put(player, selected);
-		playerList.remove(player);
-		nationList.remove(selected);
+		electionList.put(selected, nation);
+		playerList.remove(selected);
+		nationList.remove(nation);
 		for(Player otherPlayer : playerList) {
-			otherPlayer.getWeights().remove(selected);
+			otherPlayer.getWeights().remove(nation);
 		}
 
 	}
@@ -58,19 +58,20 @@ public class NationDistributer {
 	/***
 	 * This method chooses with Nation will correspond to the given player weights, returns
 	 * the choosen nation or throws an exception if its unable to
-	 * @param weights
+	 * @param nation
 	 * @return
 	 */
-	private Nation randomSelec(HashMap<Nation,Double> weights) {
+	private Player randomSelec(Nation nation) {
 		double totalProb =0;
-		for(Nation nation : weights.keySet()) {
-			totalProb += weights.get(nation);
+		for(Player player : playerList) {
+			//get the weight each player has of the selected nation
+			totalProb += player.getWeights().get(nation);
 		}
 		double rand = new Random().nextDouble() * totalProb;
-		for(Nation nation : weights.keySet()) {
-			rand -= weights.get(nation);
+		for(Player player : playerList) {
+			rand -= player.getWeights().get(nation);
 			if(rand < 0.0){
-				return nation;
+				return player;
 			}
 		}
 		throw new RuntimeException("error, the random select encountered an error, negative number");
