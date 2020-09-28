@@ -13,8 +13,8 @@ import Info.Player;
  */
 public class Variables {
 	
-	public static final int numberOfPlayers = 10;
-	public static final int numberOfNations = 10;
+	public static int numberOfPlayers = 10;
+	public static int numberOfNations = 10;
 	//there must always be al least 3 factions per tier
 	public static final int tiers = 3;
 	//the comparable weight of skill/preference, better to alternate from 0 to 1.0

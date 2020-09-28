@@ -1,12 +1,23 @@
-/**
- * 
- */
 package Main;
 
-/**
- * @author Taso
- *
- */
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import FileReader.Parser;
+
 public class Main {
+
+	public static void main(String[] args) {
+		try {
+			Parser.parse();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 }

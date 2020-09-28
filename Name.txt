@@ -1,0 +1,59 @@
+//this file must be completed by the players
+//its name must be the same as the one written on the  config.txt file with the txt ending
+//example:  Tasorodri.txt
+
+//order of countries
+//write a number below each country representing the interest you have in said country,
+// it must go from 1(most preferred) to 4 (least preferred )
+//if you want to write something put a "/" in that line and write ONLY in that line
+
+//example
+//France
+//1
+//Spain
+//4
+//UK
+//2
+//Austria
+//3
+
+@ 3 
+Austria
+
+Spain
+
+France
+
+UK
+
+@ 2
+Ottomans
+
+Russia
+
+Poland
+
+@ 1
+Italy
+
+Portugal
+
+Netherlands
+
+
+//player characteristics
+//in the lines below the comments write only a number folowin the instructions
+@ skill
+//write in the line below, from 1(least skill)  to 3(highest skill) the perceived level of skill you have in the game
+
+@ commitment
+//write in the line below, from 1(least commitment)  to 3(highest commitment) the perceived level of commitment you have for this game
+//here it counts things like disposition to extra sessions ability to assist to all sesions etc
+
+@ agresiveness
+//write in the line below, from 1(least agresiveness)  to 3(highest agresiveness) the perceived level of agresiveness you have in the game
+//here we are counting your disposition to declare wars change alliances and that kind of stuff, in general things that makes
+//the MP game more dinamic
+
+
+

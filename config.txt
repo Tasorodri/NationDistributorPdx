@@ -1,0 +1,44 @@
+//this file is used by the program to distribute the nations among the players
+//please dont change the format as it could create some unexpected result
+//you are free to write anything if the line starts with "/" character
+//dont write anything in the lines that contain the information or the "@" characters
+
+//Number Of Players/Nation
+write below @number the number of players of this game
+@ number
+10
+//Nation Names and tier level
+//write below "@ nations" and above "@ end" the list of nations that will make up the game
+// after each nation write a number representing the tier of the
+// nations from 1(weaker nations) to 3(strongest/more important Nations)
+
+@ nations
+France 3
+UK 3
+Spain 3
+Austria 3
+Russia 2
+Poland 2
+Ottomans 2 
+Italy 1
+Portugal 1
+Netherlands 1
+
+@ end
+
+//PlayerNames
+
+@ players
+Tasorodri
+Patitodo
+Basileus
+Saurian
+Traxium
+Mikel
+Avenger
+Pere
+Bertus
+PepitoMcRandom
+
+@ end
+@ endfile

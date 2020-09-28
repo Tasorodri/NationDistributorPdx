@@ -31,7 +31,7 @@ public class Nation {
 	
 	@Override
 	public String toString() {
-		return name;
+		return name + " tier =" + recommendedSkill;
 	}
 	
 }
